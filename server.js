@@ -14,6 +14,7 @@ var router = require('routes')();
 var environment = process.env.NODE_ENV || 'development';
 var config = require('./config/' + environment + '.js');
 var templarOptions = { engine: config.engine, folder: config.templates };
+var port = process.env.PORT || config.port;
 
 Templar.loadFolder(config.templates);
 
@@ -27,6 +28,6 @@ http.createServer(function (req, res) {
 
   res.template = Templar(req, res, templarOptions);
   router.match(req.url).fn(req, res, config);
-}).listen(config.port);
+}).listen(port);
 
-console.log('Server Listening - http://localhost:' + config.port + '. ' + environment + ' environment');
+console.log('Server Listening - http://localhost:' + port + '. ' + environment + ' environment');
