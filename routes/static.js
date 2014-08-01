@@ -39,7 +39,7 @@ handleDisconnect();
 var mount = st(process.cwd());
 
 module.exports = function (req, res) {
-  if (req.url === 'users') {
+  if (req.url === '/users') {
       connection.query('SELECT * from t_users', function(err, rows, fields) {
           if (err) {
               console.log('error: ', err);
