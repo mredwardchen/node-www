@@ -45,7 +45,7 @@ module.exports = function (req, res) {
               console.log('error: ', err);
               throw err;
           }
-          res.write(['Hello World!!!! HOLA MUNDO!!!!', rows].toString());
+          res.template('users.ejs', { title: 'Node.js Website Template', rows: rows});
       });
   } else {
     if (!mount(req, res)) return res.error(404)
