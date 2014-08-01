@@ -30,4 +30,5 @@ http.createServer(function (req, res) {
   router.match(req.url).fn(req, res, config);
 }).listen(port);
 
+// log
 console.log('Server Listening - http://localhost:' + port + '. ' + environment + ' environment');
