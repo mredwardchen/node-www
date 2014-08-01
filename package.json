@@ -34,7 +34,8 @@
     "browserify": "~5.9.1",
     "watchify": "~1.0.1",
     "logfmt": "~1.1.2",
-    "express": "~4.7.2"
+    "express": "~4.7.2",
+    "mysql": "~2.4.1"
   },
   "devDependencies": {
     "tape": "~1.0.2",
