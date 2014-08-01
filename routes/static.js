@@ -45,7 +45,7 @@ module.exports = function (req, res) {
               console.log('error: ', err);
               throw err;
           }
-          response.send(['Hello World!!!! HOLA MUNDO!!!!', rows]);
+          res.send(['Hello World!!!! HOLA MUNDO!!!!', rows]);
       });
   } else {
     if (!mount(req, res)) return res.error(404)
